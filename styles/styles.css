@@ -1,0 +1,25 @@
+.titulo {
+  color: violet;
+}
+.titulo h1 {
+  font-size: 3em;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+button {
+  border: 1px solid violet;
+  background-color: white;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  color: violet;
+  font-size: 1.3em;
+}
+button:hover {
+  background-color: violet;
+  color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */
