@@ -1,3 +1,5 @@
+// Sintaxis básica
+
 // Anidado de reglas para padres-hijos...
 
 .titulo {
@@ -11,6 +13,8 @@
 }
 
 h1 {font-size: 1.8em;}
+
+// Referencia al propio selector para añadir más selectores (&)
 
 button {
 
@@ -26,4 +30,64 @@ button {
         color: white;
     }
 
+    &.alert {
+        background-color: crimson;
+        color: white;
+    }
+
+}
+
+// Anidado de propiedades para shorthands
+
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: darkgoldenrod;
+    border: 2px solid crimson {
+        left: 2px solid green;
+    }
+}
+
+// Variables
+
+$main-brand: #008489;
+$main-brand-darker: #005255; 
+
+.btn-primary {
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    font-size: 1em;
+    background-color: $main-brand;
+    color: white;
+
+    &:hover {
+        background-color: $main-brand-darker;
+    }
+}
+
+// Mixins
+
+// Sintaxis  @mixin identificador($parametros) {
+//                  propiedad: valor;
+//                  propiedad: $parametro;
+//                  ...
+//            }
+
+@mixin flex($a, $b, $c) {
+    display: flex;
+    flex-direction: $a;
+    justify-content: $b; 
+    align-items: $c;
+}
+
+// Implementación del mixin @include identificador(argumentos)
+
+.titulos {
+    @include flex(row, space-between, center);
+    border: 2px solid green;
+    margin: 1em;
+
+    span {
+        border: 2px solid blue;
+    }
 }
